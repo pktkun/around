@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import uuid from 'uuid'
 import { addThread } from 'src/actions/threads'
 
 const ThreadForm = (props) => {
   // 参考:関数コンポーネントのstate:https://ja.reactjs.org/docs/hooks-state.html
   const [thread, setThread] = useState({
-    id: 'gresgsreg:;kgwa', //uuid() モーダル立ち上げた時点で取得
     type: 'event', //event, or sos, or chat
     position: 'thread', // thread, or response
     date: 0,
@@ -23,7 +21,7 @@ const ThreadForm = (props) => {
   const changeName = (e) => {
     setThread((state) => ({
       ...state,
-      name: e.target.value
+      name: e.target.value,
     }))
   };
   const onSubmit = (e) => {

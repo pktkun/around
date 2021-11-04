@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import uuid from 'uuid';
 import ThreadForm from "src/components/ThreadForm";
 import ThreadListItem from 'src/components/ThreadListItem';
 import { addThread } from 'src/actions/threads';
