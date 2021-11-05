@@ -40,7 +40,11 @@ const ThreadForm = (props) => {
       <form onSubmit={onSubmit}>
         <input type="textarea" onChange={changeText} />
         <input type="text" onChange={changeName} />
-        <button>Add</button>
+        <button
+          onClick={props.handleClearModal}
+        >
+          Add
+        </button>
       </form>
     </div>
   )

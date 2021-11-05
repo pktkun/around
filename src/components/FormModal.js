@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
+import ThreadForm from "src/components/ThreadForm";
 
 const FormModal = (props) => (
   <Modal
@@ -9,7 +10,9 @@ const FormModal = (props) => (
     closeTimeoutMS={200}
     className="modal"
   >
-    <p>modal</p>
+    <ThreadForm
+      handleClearModal={props.handleClearModal}
+    />
   </Modal>
 );
 
